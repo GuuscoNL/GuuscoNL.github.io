@@ -1,11 +1,52 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>[TBN] Stardate calculator</title>
+
+
 </head>
+
 <body>
-    
+
+  <h1>Stardate calculator for the TBN server</h1>
+  <p>Automatically sets time to the current time<br>The time is calculated with <b>UTC</b>, so for custom time please
+    keep in mind to use <b>UTC</b> </p>
+  <form>
+    Year: <input type="number" id="year" value="2381" min="2323">
+    Month: <select name="month" size="1" id="month">
+      <option value="1">January</option>
+      <option value="2">February</option>
+      <option value="3">March</option>
+      <option value="4">April</option>
+      <option value="5">May</option>
+      <option value="6">June</option>
+      <option value="7">July</option>
+      <option value="8">August</option>
+      <option value="9">September</option>
+      <option value="10">October</option>
+      <option value="11">November</option>
+      <option value="12">December</option>
+    </select>
+    Day: <input type="number" name="day" id="day" min="0" max="31">
+    </input>
+    <br>
+    Hour: <input type="number" name="hour" id="hour" min="0" max="23">
+    Minute: <input type="number" name="minute" id="minute" min="0" max="59">
+    second: <input type="number" name="second" id="second" min="0" max="59">
+    </input>
+    <br><br>
+    <button type="button" onclick="calc()">Calculate</button>
+  </form>
+  <div id="output">Calculated stardate: </div>
+  <br><br>
+  <iframe
+    src="https://cache.gametracker.com/components/html0/?host=46.4.12.78:27015&bgColor=333333&fontColor=cccccc&titleBgColor=222222&titleColor=ff9900&borderColor=555555&linkColor=ffcc00&borderLinkColor=222222&showMap=0&currentPlayersHeight=200&showCurrPlayers=1&showTopPlayers=0&showBlogs=0&width=240"
+    frameborder="0" scrolling="no" width="240" height="488"></iframe>
 </body>
+<script src="main.js"></script>
+
 </html>
