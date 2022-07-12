@@ -1,6 +1,6 @@
 // At the beginning ser the dates to the current time
 let today = new Date();
-document.getElementById("year").defaultValue = today.getUTCFullYear()// + 359;
+document.getElementById("year").defaultValue = today.getUTCFullYear() + 359;
 document.getElementById("month").value = today.getUTCMonth()+1;
 document.getElementById("day").defaultValue = today.getUTCDate();
 document.getElementById("hour").defaultValue = today.getUTCHours();
@@ -16,8 +16,8 @@ function calc() {
     let second = parseInt(document.querySelector("#second").value);
 
     // Time Offset Configuration
-    let START_YEAR_REAL = 2022
-    let START_YEAR_RP = 2380
+    //let START_YEAR_REAL = 2022
+    //let START_YEAR_RP = 2380
 
     // Stardate Configuration.
     let STARDATE_STANDARD_YEAR = 2323
@@ -38,7 +38,7 @@ function calc() {
     ]
 
     // Check if current year is a leap year
-    let y = year + START_YEAR_RP - START_YEAR_REAL
+    let y = year //+ START_YEAR_RP - START_YEAR_REAL
     let n
     if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
         n = 366
