@@ -15,10 +15,6 @@ function calc() {
     let minute = parseInt(document.querySelector("#minute").value);
     let second = parseInt(document.querySelector("#second").value);
 
-    // Time Offset Configuration
-    //let START_YEAR_REAL = 2022
-    //let START_YEAR_RP = 2380
-
     // Stardate Configuration.
     let STARDATE_STANDARD_YEAR = 2323
     let STARDATE_START_YEAR = 0
@@ -38,7 +34,6 @@ function calc() {
     ]
 
     // Check if current year is a leap year
-    let y = year //+ START_YEAR_RP - START_YEAR_REAL
     let n
     if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
         n = 366
@@ -46,7 +41,7 @@ function calc() {
         n = 365
     }
     let monthOffset = MONTHTABLE[month]
-    let stardate = STARDATE_START_YEAR + (1000 * (y - STARDATE_STANDARD_YEAR)) + ((1000 / n) * (
+    let stardate = STARDATE_START_YEAR + (1000 * (year - STARDATE_STANDARD_YEAR)) + ((1000 / n) * (
         monthOffset +
         (day - 1) +
         (hour / 24) +
