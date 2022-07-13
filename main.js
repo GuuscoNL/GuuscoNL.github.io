@@ -1,11 +1,15 @@
-// At the beginning ser the dates to the current time
-let today = new Date();
-document.getElementById("year").defaultValue = today.getUTCFullYear() + 359;
-document.getElementById("month").value = today.getUTCMonth()+1;
-document.getElementById("day").defaultValue = today.getUTCDate();
-document.getElementById("hour").defaultValue = today.getUTCHours();
-document.getElementById("minute").defaultValue = today.getUTCMinutes();
-document.getElementById("second").defaultValue = today.getUTCSeconds();
+
+function current_date() {
+    let today = new Date();
+    document.getElementById("year").value = today.getUTCFullYear() + 359;
+    document.getElementById("month").value = today.getUTCMonth() + 1;
+    document.getElementById("day").value = today.getUTCDate();
+    document.getElementById("hour").value = today.getUTCHours();
+    document.getElementById("minute").value = today.getUTCMinutes();
+    document.getElementById("second").value = today.getUTCSeconds();
+}
+// At the beginning set the dates to the current time
+current_date()
 
 function calc() {
     let year = parseInt(document.querySelector("#year").value);
@@ -52,3 +56,4 @@ function calc() {
     message = "Calculated stardate: " + stardate
     document.querySelector("#output").innerHTML = message;
 }
+calc();
