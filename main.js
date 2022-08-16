@@ -1,7 +1,7 @@
 
 function current_date() {
     let today = new Date();
-    document.getElementById("year").value = today.getUTCFullYear() + 359;
+    document.getElementById("year").value = today.getUTCFullYear() + 360;
     document.getElementById("month").value = today.getUTCMonth() + 1;
     document.getElementById("day").value = today.getUTCDate();
     document.getElementById("hour").value = today.getUTCHours();
