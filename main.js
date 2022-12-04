@@ -44,7 +44,7 @@ function calc() {
     } else {
         n = 365
     }
-    let monthOffset = MONTHTABLE[month]
+    let monthOffset = MONTHTABLE[month - 1]
     let stardate = STARDATE_START_YEAR + (1000 * (year - STARDATE_STANDARD_YEAR)) + ((1000 / n) * (
         monthOffset +
         (day - 1) +
