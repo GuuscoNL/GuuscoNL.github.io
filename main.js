@@ -52,7 +52,7 @@ function calc() {
         (minute / (24 * 60) +
             (second / (24 * 3600)))
     ))
-    stardate = stardate.toFixed(2)
+    stardate = stardate.toFixed(3)
     message = "Calculated stardate: " + stardate
     document.querySelector("#output").innerHTML = message;
 }
