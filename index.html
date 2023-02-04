@@ -1,47 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="index.css" />
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="Images\TBN_icon_cirlce.ico"
+		/>
+		<title>[TBN] Stardate calculator</title>
+	</head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="index.css" />
-  <link rel="icon" type="image/x-icon" href="Images\TBN_icon_cirlce.ico" />
-  <title>[TBN] Stardate calculator</title>
-</head>
+	<body id="main-body">
+		<div id="container">
+			<div id="main">
+				<img src="Images\TBN_Banner.png" alt="TBN Banner" id="banner" />
+				<h1>Stardate calculator for the TBN server</h1>
 
-<body id="main-body">
-  <div id="container">
-    <div id="main">
-      <img src="Images\TBN_Banner.png" alt="TBN Banner" id="banner" />
-      <h1>Stardate calculator for the TBN server</h1>
+				<p>
+					Automatically sets time to the current time and the correct
+					RP year<br />
+					The time is calculated with <b>UTC</b>, so for a custom time
+					please keep in mind to use <b>UTC</b>
+				</p>
 
-      <p>
-        Automatically sets time to the current time and the correct RP year<br />
-        The time is calculated with <b>UTC</b>, so for a custom time please
-        keep in mind to use <b>UTC</b>
-      </p>
+				<form>
+					<input type="time" id="time-input" name="time-input" />
+					<input
+						type="date"
+						id="date-input"
+						name="date-input"
+						value="2323-01-01"
+						min="2323-01-01"
+						onblur="OnLostFocusDate()"
+					/>
+					<span class="validity"></span>
 
-      <form>
-        <input type="datetime-local" id="datetime-input" name="datetime-input" value="2323-01-01T00:00"
-          min="2323-01-01T00:00" onblur="OnLostFocusDatetime()" />
-          <span class="validity"></span>
-        <br /><br />
-        <button type="button" id="button_current date" onclick="current_date()">
-          Set to current time in RP
-        </button>
-      </form>
+					<br />
 
-      <p id="output"><br />Calculated stardate:</p>
-    </div>
-  </div>
+					<br /><br />
+					<button
+						type="button"
+						id="button_current date"
+						onclick="current_date()"
+					>
+						Set to current time in RP
+					</button>
+				</form>
 
-  <footer id="footer">
-    <a href="https://www.gametracker.com/server_info/46.4.12.78:27015/" target="_blank"><img
-        src="https://cache.gametracker.com/server_info/46.4.12.78:27015/b_560_95_1.png" border="0" width="560"
-        height="95" alt="Game tracker" id="gametracker" /></a>
-  </footer>
-</body>
+				<p id="output"><br />Calculated stardate:</p>
+			</div>
+		</div>
 
-<script src="main.js"></script>
+		<footer id="footer">
+			<a
+				href="https://www.gametracker.com/server_info/46.4.12.78:27015/"
+				target="_blank"
+				><img
+					src="https://cache.gametracker.com/server_info/46.4.12.78:27015/b_560_95_1.png"
+					border="0"
+					width="560"
+					height="95"
+					alt="Game tracker"
+					id="gametracker"
+			/></a>
+		</footer>
+	</body>
 
+	<script src="main.js"></script>
 </html>
