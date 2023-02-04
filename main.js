@@ -53,11 +53,11 @@ function OnLostFocusDate() {
 	let input_date_raw = document.getElementById("date-input").value;
 	let input_date = new Date(input_date_raw);
 	let input_time_raw = document.getElementById("time-input").value.split(":");
-    
+
 	input_date.setUTCHours(Number(input_time_raw[0]));
-    input_date.setUTCMinutes(Number(input_time_raw[1]));
-    input_date.setUTCSeconds(0)
-    console.log(input_date)
+	input_date.setUTCMinutes(Number(input_time_raw[1]));
+	input_date.setUTCSeconds(0);
+	console.log(input_date);
 	// In case a there were more days in the month entered
 	if (input_date_raw == "") {
 		console.log("oh no");
