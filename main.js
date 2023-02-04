@@ -60,7 +60,6 @@ function OnLostFocusDate() {
 	console.log(input_date);
 	// In case a there were more days in the month entered
 	if (input_date_raw == "") {
-		console.log("oh no");
 		document.querySelector("#output").innerHTML =
 			"Calculated stardate: Invalid date";
 		return;
