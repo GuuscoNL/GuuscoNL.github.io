@@ -3,51 +3,45 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" type="image/x-icon" href="Images\TBN_icon_cirlce.ico" />
   <title>[TBN] Stardate calculator</title>
-
-
 </head>
 
-<body>
+<body id="main-body">
+  <div id="container">
+    <div id="main">
+      <img src="Images\TBN_Banner.png" alt="TBN Banner" id="banner" />
+      <h1>Stardate calculator for the TBN server</h1>
 
-  <h1>Stardate calculator for the TBN server</h1>
-  <p>Automatically sets time to the current time and the correct RP year<br>The time is calculated with <b>UTC</b>, so for a custom time please
-    keep in mind to use <b>UTC</b> </p>
-  <form>
-    Year: <input type="number" id="year" min="2323">
-    Month: <select name="month" size="1" id="month">
-      <option value="1">January</option>
-      <option value="2">February</option>
-      <option value="3">March</option>
-      <option value="4">April</option>
-      <option value="5">May</option>
-      <option value="6">June</option>
-      <option value="7">July</option>
-      <option value="8">August</option>
-      <option value="9">September</option>
-      <option value="10">October</option>
-      <option value="11">November</option>
-      <option value="12">December</option>
-    </select>
-    Day: <input type="number" name="day" id="day" min="1" max="31">
-    </input>
-    <br>
-    Hour: <input type="number" name="hour" id="hour" min="0" max="23">
-    Minute: <input type="number" name="minute" id="minute" min="0" max="59">
-    second: <input type="number" name="second" id="second" min="0" max="59">
-    </input>
-    <br><br>
-    <button type="button" onclick="calc()">Calculate</button>
-    <button type="button" onclick="current_date()">Current time</button>
-  </form>
-  <div id="output">Calculated stardate: </div>
-  <br>
-  <iframe
-    src="https://cache.gametracker.com/components/html0/?host=46.4.12.78:27015&bgColor=333333&fontColor=cccccc&titleBgColor=222222&titleColor=ff9900&borderColor=555555&linkColor=ffcc00&borderLinkColor=222222&showMap=0&currentPlayersHeight=200&showCurrPlayers=1&showTopPlayers=0&showBlogs=0&width=240"
-    frameborder="0" scrolling="no" width="240" height="488"></iframe>
+      <p>
+        Automatically sets time to the current time and the correct RP year<br />
+        The time is calculated with <b>UTC</b>, so for a custom time please
+        keep in mind to use <b>UTC</b>
+      </p>
+
+      <form>
+        <input type="datetime-local" id="datetime-input" name="datetime-input" value="2323-01-01T00:00"
+          min="2323-01-01T00:00" onblur="OnLostFocusDatetime()" />
+          <span class="validity"></span>
+        <br /><br />
+        <button type="button" id="button_current date" onclick="current_date()">
+          Set to current time in RP
+        </button>
+      </form>
+
+      <p id="output"><br />Calculated stardate:</p>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <a href="https://www.gametracker.com/server_info/46.4.12.78:27015/" target="_blank"><img
+        src="https://cache.gametracker.com/server_info/46.4.12.78:27015/b_560_95_1.png" border="0" width="560"
+        height="95" alt="Game tracker" id="gametracker" /></a>
+  </footer>
 </body>
+
 <script src="main.js"></script>
 
 </html>
